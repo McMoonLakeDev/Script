@@ -158,7 +158,7 @@ public class MoonLakeScript {
 
         Class<? extends Event> event = EventMapping.INSTANCE.getEventClass(listener.get("event").toString());
         // 验证事件类是否存在
-        Validate.notNull(event, "The listener listener class not exists.");
+        Validate.notNull(event, "The listener event class not mapping or not exists.");
         // 存在则进行加载
         EventPriority priority = (EventPriority) listener.getOrDefault("priority", EventPriority.NORMAL);
         boolean ignoreCancelled = (boolean) listener.getOrDefault("ignoreCancelled", false);
