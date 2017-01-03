@@ -153,8 +153,8 @@ public class MoonLakeScript {
         // 注册事件监听器: Map
         // 必须拥有的属性: listener -> 事件名称
         //                           handler -> 处理器函数
-        Validate.isTrue(listener.containsKey("event"), "The listener not has listener.");
-        Validate.isTrue(listener.containsKey("handler"), "The listener not has listener handler.");
+        Validate.isTrue(listener.containsKey("event"), "The listener not has event.");
+        Validate.isTrue(listener.containsKey("handler"), "The listener not has event handler.");
 
         Class<? extends Event> event = EventMapping.INSTANCE.getEventClass(listener.get("event").toString());
         // 验证事件类是否存在
